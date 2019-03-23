@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="passing">
+        
+                <div class="result">
+                    <% data["Search"].forEach(function(data){ %>
+                    <h2>Title:</h2><h3><%=data["Title"] %> </h3>
+                    <h4>Year:</h4><h4><%=data["Year"] %> </h4>
+                    <h4>type:</h4><h4><%=data["Type"] %> </h4>
+                    <img src="<%=data["Poster"] %>">
+                </div>
+                <% }) %>
+            </div>
+            <a href="/">Back to search?</a>
+</body>
+</html>

@@ -9,11 +9,12 @@ app.use('/assets',express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.get('/',function(req,res){
+app.get('/',function(req,res)
+{   
     res.render('index');
-})
-app.post('/',function(req,res)
-{   var title=req.body.search;
+});
+app.post('/result',function(req,res){
+    var title=req.body.search;
     var type=req.body.type;
     var result=req.body.result;
     var url='http://www.omdbapi.com/?apikey=e1be34&s='+title+'&type='+type+'&page='+result;
@@ -27,13 +28,18 @@ app.post('/',function(req,res)
     else
     {
         var Data=JSON.parse(body);
-        res.render('index',{Data:Data});
+        if(Data!=JSON)
+        {
+            res.send('wrong input')
+        }
+        else{
+            res.render('result',{data:Data});
+        }
+        
    
     }
 })
-
 });
-
 app.listen(3000,function(){
     console.log('server up and running');
 })
