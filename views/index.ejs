@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Search</title>
 </head>
-<body>
-    <form action="/result" method="post">
-       <span class="values"> Name</span><input type="text" name="search" id="search" placeholder="Search movies"> <br>
-       <input type="radio" name="type" value="Movie"> Movie 
-       <input type="radio" name="type" value="Series"> Series<br>
-       <span class="values"> Number of result you want</span><input type="text" name="result" id="result" placeholder="1-100">
-    <button type="submit" value="Submit">Submit</button>
+<body class="body">
+    <h1>Search about movies and series</h1>
+    <form action="/result" method="post" class="">
+       <span class="label"> Name</span><input type="text" name="search" class="input" placeholder="Search movies"> <br>
+       <input type="radio" name="type" value="Movie" class=" radio1"> <span class="radio">Movie</span> <br>
+       <input type="radio" name="type" value="Series" class=" radio1"> <span class="radio">Series</span> <br>
+    <button type="submit" value="Submit" class="btn btn-primary btn-lg">Submit</button>
     </form>
    
 </body>
